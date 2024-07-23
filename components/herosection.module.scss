@@ -1,0 +1,132 @@
+.heroSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem; // Horizontal padding
+  box-sizing: border-box;
+  background: url("/images/background.jpg") no-repeat center center/cover; // Example background image
+
+  .textContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 80%; // Half of the screen width
+    color: #ffffff; // Text color for better contrast
+    z-index: 1; // Ensure text content is above other elements
+    padding: 1rem; // Add padding for better text alignment
+
+    .mainHeading {
+      font-size: 3.5rem; // Adjusted size for better proportionality
+      margin: 0;
+      line-height: 1.2;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); // Darker shadow for better visibility
+
+      span {
+        display: block; // Ensure each span is on a new line
+      }
+
+      .highlightedText {
+        color: #0070f3; // Different color for highlighted text
+      }
+
+      @media (max-width: 768px) {
+        font-size: 2rem !important; // Adjust font size for smaller screens
+      }
+
+      @media (max-width: 480px) {
+        font-size: 2rem !important; // Further adjust font size for mobile screens
+      }
+    }
+
+    .description {
+      font-size: 1.1rem; // Slightly larger paragraph text
+      margin: 1rem 0;
+      max-width: 70%;
+      width: 70%;
+      line-height: 1.6;
+      font-weight: 300;
+      max-width: 80%;
+      @media (max-width: 768px) {
+        display: none;
+        font-size: 1rem !important; // Adjust font size for smaller screens
+      }
+
+      @media (max-width: 480px) {
+        display: none;
+        font-size: 0.9rem !important; // Further adjust font size for mobile screens
+      }
+    }
+
+    .ctaButton {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      background-color: #0070f3; // Primary color
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      border-radius: 0.5rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      font-weight: bold;
+      border: 2px solid transparent;
+      max-width: 200px; // Restrict button width
+      text-align: center;
+      margin-top: 1rem;
+
+      &:hover {
+        background-color: #005bb5; // Darker shade for hover effect
+        transform: scale(1.05); // Slight scaling effect on hover
+        border: 2px solid #ffffff; // Border color on hover
+      }
+
+      &:focus {
+        outline: none; // Remove default focus outline
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); // Custom focus ring
+      }
+      @media (max-width: 768px) {
+        margin-top: 2rem !important;
+        // Adjust font size for smaller screens
+      }
+
+      @media (max-width: 480px) {
+        margin-top: 2rem !important;
+        // Further adjust font size for mobile screens
+      }
+    }
+  }
+
+  .imageWrapper {
+    flex: 1;
+    max-width: 50%; // Half of the screen width
+    margin-top: 2rem; // Added margin to separate image from text on smaller screens
+
+    img {
+      width: 100%;
+      height: auto;
+      border: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column; // Change to column layout for smaller screens
+
+    .textContent {
+      max-width: 100%;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 2rem;
+    }
+
+    .imageWrapper {
+      max-width: 100%;
+      //margin-top: 2rem; // Added margin to separate image from text on smaller screens
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .heroSection {
+      padding: 0 4rem; // Increase padding for larger screens
+    }
+  }
+}
