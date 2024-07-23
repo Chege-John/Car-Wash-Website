@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./HeroSection.module.scss";
+import styles from "./heroSection.module.scss";
 import dcar from "./dcar.png";
 
 const openWhatsApp = () => {
